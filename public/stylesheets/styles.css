@@ -1,5 +1,6 @@
 body{
-  background-image: url("http://imgur.com/sR16aYv");
+  background-image: lightblue;
+  /*url("http://imgur.com/sR16aYv");*/
 }
 
 font{
@@ -8,6 +9,15 @@ font{
   font-color: black;
 }
 
+.food{
+  background-color: lightblue;
+}
+
+.party{
+  background-color: lightyellow;
+}
+
 h1{
-  text-align:center;
+  display: inline-block;
+  border: 1px solid black;
 }
