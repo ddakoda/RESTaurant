@@ -3,23 +3,23 @@ class PartiesController < Sinatra::Base
     enable  :sessions
 
   # GET	/api/parties	All parties
-  get '/api/parties' do
+  get '/' do
     content_type :json
     Party.all.to_json
   end
   # GET	/api/parties/:id	A single party and all the orders it contains
-  get '/api/parties/:id' do
+  get '/:id' do
     party = Party.find(params[:id].to_i)
     party.to_json
   end
   # POST	/api/parties	Creates a new party
-  post '/api/parties' do
+  post '/' do
     content_type :json
     party = Party.create(params[:party])
     party.to_json
   end
   # PATCH	/api/parties/:id	Updates a party's details
-  patch '/api/parties/:id' do
+  patch '/:id' do
     content_type :json
     party = Party.find(params[:id].to_i).update(params[:party])
     party.to_json

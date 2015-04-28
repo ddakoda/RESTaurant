@@ -10,7 +10,7 @@ $(document).ready(function(){
     model: app.PartyModel
   })
 
-  app.guests = new app.GuestsCollection({
+  app.guests = new app.GuestCollection({
     model: app.GuestModel
   })
 
@@ -24,22 +24,22 @@ $(document).ready(function(){
 
 
   app.foodListPainter = new app.GeneralListView({
-    modelView: app.FoodView,
+    //modelView: app.FoodView,
     collection: app.foods,
     el: $('#menu-list'),
   });
 
   app.partyListPainter = new app.GeneralListView({
-    modelView: app.PartyView,
+    //modelView: app.PartyView,
     collection: app.parties,
     el: $('#party-list'),
   });
 
   app.foods.fetch();
   app.parties.fetch();
-  app.orders.fetch();
-  app.guests.fetch();
-  app.receipts.fetch();
+  //app.orders.fetch();
+  //app.guests.fetch();
+  //app.receipts.fetch();
 
 });
 

@@ -1,5 +1,5 @@
 var app = app || {};
 
 app.ReceiptCollection = Backbone.Collection.extend({
-  url: '/api/receipt'
+  url: '/api/receipts'
 });
