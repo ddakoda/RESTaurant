@@ -22,7 +22,6 @@ $(document).ready(function(){
     model: app.ReceiptModel
   })
 
-
   app.foodListPainter = new app.GeneralListView({
     //modelView: app.FoodView,
     collection: app.foods,
