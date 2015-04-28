@@ -20,3 +20,4 @@ class GuestsController < Sinatra::Base
     erb :not_authenticated
   end
 end
+end
