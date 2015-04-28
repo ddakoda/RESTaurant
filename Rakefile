@@ -13,6 +13,7 @@ require './models/food'
 require './models/guest'
 require './models/order'
 require './models/party'
+require './models/receipt'
 
 # Goal is to say 'coffee!'
 namespace :demo do
@@ -55,15 +56,13 @@ namespace :db do
     Receipt.destroy_all
   end
 end
-
-namespace :wake do
-
-  desc 'wake'
-  task :wake do
-    puts 'coffee'
-    puts 'coffee'
-    puts 'coffee'
-    puts 'coffee'
-  end
-
-end
+#
+# namespace :wake do
+#
+#   desc 'wake'
+#   task :wake do
+#     puts 'coffee'
+#     puts 'coffee'
+#     puts 'coffee'
+#     puts 'coffee'
+#   end

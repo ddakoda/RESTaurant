@@ -12,9 +12,11 @@ ActiveRecord::Base.establish_connection(
 require './models/food'
 require './models/order'
 require './models/party'
+require './models/guest'
+require './models/receipt'
 
-# # ** Sessions **    DO I NEED THIS?!
-# enable(:sessions)** DO I NEED THIS?!
+# sessions
+enable(:sessions)
 
 # helpers
 require './helpers/session_helpers'
@@ -23,8 +25,13 @@ require './helpers/session_helpers'
 require './controllers/foods_controller'
 require './controllers/orders_controller'
 require './controllers/parties_controller'
+require './controllers/guests_controller'
+require './controllers/receipts_controller'
 
 # run app
-map('/api/foods_controller') { run FoodsController.new() }
+map('/api/foods') { run FoodsController.new() }
 map('/api/orders') { run OrdersController.new() }
 map('/api/parties') { run PartiesController.new() }
+map('/api/receipts') { run ReceiptsController.new() }
+
+map('/') { run GuestsController.new() }

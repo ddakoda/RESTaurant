@@ -8,35 +8,35 @@ class FoodsController < Sinatra::Base
     'WikiWiki'
   end
   # GET	/api/foods	All food items available
-  get '/api/foods' do
+  get '/' do
     content_type :json
     Food.all.to_json
   end
   # GET	/api/foods/:id	A single food item and all the parties that included it
-  get '/api/foods/:id' do
+  get '/:id' do
     food = Food.find(params[:id].to_i)
     food.to_json
   end
   # POST	/api/foods	Creates a new food item
-  post '/api/foods' do
+  post '/' do
     content_type :json
     food = Food.create(params[:food])
     food.to_json
   end
   # PATCH	/api/foods/:id	Updates a food item
-  patch '/api/foods/:id' do
+  patch '/:id' do
     content_type :json
     food = Food.find(params[:id].to_i).update(params[:food])
     food.to_json
   end
   # PUT	/api/foods/:id	Updates a food item
-  put '/api/foods/:id' do
+  put '/:id' do
     content_type :json
     food = Food.find(params[:id].to_i).update(params[:food])
     food.to_json
   end
   # DELETE	/api/foods/:id	Deletes a food item
-  delete '/api/foods/:id' do
+  delete '/:id' do
     content_type :json
     id = params[:id].to_i
     food = Food.destroy(id)

@@ -25,31 +25,27 @@ class PartiesController < Sinatra::Base
     party.to_json
   end
   # PUT	/api/parties/:id	Updates a party's details
-  put '/api/parties/:id' do
+  put '/:id' do
     content_type :json
     party = Party.find(params[:id].to_i).update(params[:party])
     party.party
   end
   # DELETE	/api/parties/:id	Delete a party
-  delete '/api/parties/:id' do
+  delete '/:id' do
     content_type :json
     id = params[:id].to_i
     party = Party.destroy(id)
   end
 
-  # GET	/api/parties/:id/receipt	Saves the party's receipt data to a file.
-  get '/api/parties/:id/receipt' do
-    content_type :json
-    Receipt.all.to_json
-  end
+
   # PATCH	/api/parties/:id/checkout	Marks the party as paid
-  patch '/api/parties/:id/checkout' do
+  patch '/:id/checkout' do
     content_type :json
     checkout = Checkout.find(params[:id].to_i).update(params[:checkout])
     checkout.to_json
   end
   # PUT	/api/parties/:id/checkout	Marks the party as paid
-  put '/api/parties/:id/checkout' do
+  put '/:id/checkout' do
     content_type :json
     checkout = Checkout.find(params[:id].to_i).update(params[:checkout])
     checkout.to_json
