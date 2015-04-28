@@ -10,6 +10,19 @@ $(document).ready(function(){
     model: app.PartyModel
   })
 
+  app.guests = new app.GuestsCollection({
+    model: app.GuestModel
+  })
+
+  app.orders = new app.OrderCollection({
+    model: app.OrderModel
+  })
+
+  app.receipts = new app.ReceiptCollection({
+    model: app.ReceiptModel
+  })
+
+
   app.foodListPainter = new app.GeneralListView({
     modelView: app.FoodView,
     collection: app.foods,
