@@ -34,7 +34,7 @@ $(document).ready(function(evt) {
   });
 
   foodCollection.fetch();
-});
+
 //
 // // define an app namespace
 // var app = {};
