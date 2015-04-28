@@ -1,6 +1,55 @@
 <html>
   <head>
     <title>WikiWiki</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+  </head>
+  <body>
+
+    <h2>Manager Status</h2>
+
+    <form action="/sessions" method='post'>
+      <input type="hidden" name='_method' value='delete'>
+      <input type="submit" value='log-out'>
+    </form>
+
+    <!-- ****** JS Libraries ****** -->
+    <script src='/javascripts/lib/jquery.js'></script>
+    <script src='/javascripts/lib/underscore.js'></script>
+    <script src='/javascripts/lib/backbone.js'></script>
+
+    <!-- ****** Backbone Models ****** -->
+    <script src='/javascripts/models/FoodModel.js'></script>
+    <script src='/javascripts/models/PartyModel.js'></script>
+    <script src='/javascripts/models/GuestModel.js'></script>
+    <script src='/javascripts/models/OrderModel.js'></script>
+    <script src='/javascripts/models/ReceiptModel.js'></script>
+
+    <!-- ****** Backbone Collection ****** -->
+    <script src='/javascripts/collections/FoodCollection.js'></script>
+    <script src='/javascripts/collections/PartyCollection.js'></script>
+    <script src='/javascripts/collections/GuestCollection.js'></script>
+    <script src='/javascripts/collections/OrderCollection.js'></script>
+    <script src='/javascripts/collections/ReceiptCollection.js'></script>
+
+    <!-- ****** Backbone Views ****** -->
+    <script src='/javascripts/views/FoodView.js'></script>
+    <script src='/javascripts/views/PartyView.js'></script>
+    <script src='/javascripts/views/GuestView.js'></script>
+    <script src='/javascripts/views/OrderView.js'></script>
+    <script src='/javascripts/views/ReceiptView.js'></script>
+    <script src='/javascripts/views/GeneralListView.js'></script>
+
+    <!-- ****** JS Application ****** -->
+    <script src='/javascripts/app.js'></script>
+
+  </body>
+</html>
+
+<!--
+
+<html>
+  <head>
+    <title>WikiWiki</title>
     <link href="http://fonts.googleapis.com/css?family=Josefin+Sans:700|Amatic+SC:700" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
@@ -25,4 +74,4 @@
     <script charset="utf-8" src="/javascripts/app.js"></script>
 
   </body>
-</html>
+</html> -->
