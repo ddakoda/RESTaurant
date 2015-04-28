@@ -35,8 +35,11 @@ $(document).ready(function(){
     el: $('#party-list'),
   });
 
-  app.parties.fetch();
   app.foods.fetch();
+  app.parties.fetch();
+  app.orders.fetch();
+  app.guests.fetch();
+  app.receipts.fetch();
 
 });
 
