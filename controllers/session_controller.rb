@@ -1,6 +1,7 @@
 class SessionController < Sinatra::Base
   enable  :sessions
   helpers Sinatra::SessionHelper
+  use Rack::MethodOverride
 
 
   post '/' do

@@ -16,24 +16,28 @@ class FoodsController < Sinatra::Base
   end
   # POST	/api/foods	Creates a new food item
   post '/' do
+    authenticate!
     content_type :json
     food = Food.create(params[:food])
     food.to_json
   end
   # PATCH	/api/foods/:id	Updates a food item
   patch '/:id' do
+    authenticate!
     content_type :json
     food = Food.find(params[:id].to_i).update(params[:food])
     food.to_json
   end
   # PUT	/api/foods/:id	Updates a food item
   put '/:id' do
+    authenticate!
     content_type :json
     food = Food.find(params[:id].to_i).update(params[:food])
     food.to_json
   end
   # DELETE	/api/foods/:id	Deletes a food item
   delete '/:id' do
+    authenticate!
     content_type :json
     id = params[:id].to_i
     food = Food.destroy(id)

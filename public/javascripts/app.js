@@ -39,6 +39,7 @@ $(document).ready(function(){
 
         $('.food-selected').removeClass('food-selected');
         $('.party-selected').removeClass('party-selected');
+
       }
     });
   });

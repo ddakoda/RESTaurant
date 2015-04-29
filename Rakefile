@@ -12,6 +12,7 @@ ActiveRecord::Base.establish_connection(
 require './models/food'
 require './models/guest'
 require './models/order'
+require './models/user'
 require './models/party'
 require './models/receipt'
 
@@ -35,25 +36,29 @@ namespace :db do
     10.times { Order.create({name: Faker::Name.name}) }
   end
 
-end
+  desc 'Generate User'
+  task :user_order do
+    10.times { Order.create({name: Faker::Name.name}) }
+  end
 
-namespace :db do
   desc 'populate items'
   task :gen_items do
     Food.create({name: 'Coffee'})
     Food.create({name: 'Coffee'})
   end
-end
 
-
-namespace :db do
   desc 'Empty Database'
   task :destroy_all do
     Food.destroy_all
     Order.destroy_all
     Party.destroy_all
-    # Guest.destroy_all
-    # Receipt.destroy_all
+  end
+
+  desc "Create User"
+  task :create_user do
+  user = User.new({username: 'dakoduh'})
+  user.password='deedub'
+  user.save!
   end
 
   desc "Fill Database some Junk Data"
