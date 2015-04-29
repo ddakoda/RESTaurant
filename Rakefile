@@ -40,8 +40,8 @@ end
 namespace :db do
   desc 'populate items'
   task :gen_items do
-    Item.create({name: 'Cheese'})
-    Item.create({name: 'Spam'})
+    Food.create({name: 'Banana'})
+    Food.create({name: 'Coffeee'})
   end
 end
 
@@ -52,9 +52,45 @@ namespace :db do
     Food.destroy_all
     Order.destroy_all
     Party.destroy_all
-    Guest.destroy_all
-    Receipt.destroy_all
+    # Guest.destroy_all
+    # Receipt.destroy_all
   end
+
+  desc "Fill Database some Junk Data"
+  task :junk_data do
+
+    # Generate random Food
+    foods_starting = ['Veggie', 'Rice']
+    food_ending = ['Salad', 'Soup', 'Plate', 'Bowl']
+    cuisines = ['Lite', 'Homecooking', 'Party', 'Bar Food']
+    rand(5..15).times do
+      Food.create({
+          name: ( foods_starting.sample + ' ' + food_ending.sample),
+          cents: rand(500..1500),
+          cuisine: cuisines.sample
+      })
+    end
+
+    # Generate random Parties
+    rand(5..15).times do |num|
+      Party.create({
+        table_number: num,
+        is_paid: [true, false, false].sample
+      })
+    end
+
+    # Generate random Orders
+    parties = Party.all
+    foods = Food.all
+    rand(10..35).times do |num|
+      Order.create({
+        party: parties.sample,
+        food: foods.sample
+      })
+    end
+
+  end # task :junk_data
+
 end
 #
 # namespace :wake do

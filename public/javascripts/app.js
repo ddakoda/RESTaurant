@@ -10,26 +10,14 @@ $(document).ready(function(){
     model: app.PartyModel
   })
 
-  app.guests = new app.GuestCollection({
-    model: app.GuestModel
-  })
-
-  app.orders = new app.OrderCollection({
-    model: app.OrderModel
-  })
-
-  app.receipts = new app.ReceiptCollection({
-    model: app.ReceiptModel
-  })
-
   app.foodListPainter = new app.GeneralListView({
-    //modelView: app.FoodView,
+    modelView: app.FoodView,
     collection: app.foods,
-    el: $('#menu-list'),
+    el: $('#food-list'),
   });
 
   app.partyListPainter = new app.GeneralListView({
-    //modelView: app.PartyView,
+    modelView: app.PartyView,
     collection: app.parties,
     el: $('#party-list'),
   });
@@ -41,9 +29,6 @@ $(document).ready(function(){
 
     var partyId = app.partySelection.get('id');  // Obtain the id from the selected party
     var foodId = app.foodSelection.get('id');   // Obtain the id from the selected food
-    var guestId = app.guestSelection.get('id'); // Obtain the id from the selected guest
-    var orderId = app.orderSelection.get('id'); // Obtain the id from the selected order
-    var receiptId = app.receiptSelection.get('id'); // Obtain the id from the selected receipt
 
     $.ajax({
       method: 'post',
@@ -56,4 +41,6 @@ $(document).ready(function(){
         $('.party-selected').removeClass('party-selected');
       }
     });
+  });
+
 });

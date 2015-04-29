@@ -1,6 +1,7 @@
 class GuestsController < Sinatra::Base
   enable  :sessions
   helpers Sinatra::SessionHelper
+  use Rack::MethodOverride
 
   set :views, File.expand_path('../../views', __FILE__)
   set :public_folder, File.expand_path('../../public', __FILE__)
@@ -21,7 +22,11 @@ class GuestsController < Sinatra::Base
   end
 
   post '/sessions' do
-    'sippin'
+
+  end
+
+  delete '/sessions' do
+
   end
 end
 end

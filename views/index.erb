@@ -2,19 +2,24 @@
   <head>
     <title>WikiWiki</title>
     <link rel="stylesheet" href="/stylesheets/styles.css">
-    template: _.template('<%= erb :template_rest %>'),
   </head>
   <body>
 
-  <h2>Greetings Manager</h2>
+    <h3>Welcome</h3>
 
-   <form action="/sessions" method='post'>
-     <input type="hidden" name='_method' value='delete'>
-     <input type="submit" value='log-out'>
-   </form>
+    <button id='place-order'>Order</button>
+
+    <ul id='food-list'>
+      <li>loading...</li>
+    </ul>
+
+    <ul id='party-list'>
+      <li>loading...</li>
+    </ul>
+
 
    <!-- ****** Template ****** -->
-    <script type = 'text/template_rest'>
+    <!-- <script type = 'text/template_rest'> -->
 
     <!-- ****** Libs ****** -->
     <script src='/javascripts/lib/jquery.js'></script>

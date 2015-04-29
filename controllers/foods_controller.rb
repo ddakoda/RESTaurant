@@ -3,10 +3,7 @@ class FoodsController < Sinatra::Base
     enable  :sessions
     helpers Sinatra::SessionHelper
 
-# GET/Displays the waitstaff's application
-  get '/' do
-    'WikiWiki'
-  end
+
   # GET	/api/foods	All food items available
   get '/' do
     content_type :json
