@@ -12,6 +12,7 @@ ActiveRecord::Base.establish_connection(
 require './models/food'
 require './models/order'
 require './models/party'
+require './models/user'
 require './models/guest'
 require './models/receipt'
 
@@ -24,6 +25,7 @@ require './helpers/session_helpers'
 # controllers
 require './controllers/foods_controller'
 require './controllers/orders_controller'
+require './controllers/users_controller'
 require './controllers/parties_controller'
 require './controllers/guests_controller'
 require './controllers/managers_controller'

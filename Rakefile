@@ -40,8 +40,8 @@ end
 namespace :db do
   desc 'populate items'
   task :gen_items do
-    Food.create({name: 'Banana'})
-    Food.create({name: 'Coffeee'})
+    Food.create({name: 'Coffee'})
+    Food.create({name: 'Coffee'})
   end
 end
 
