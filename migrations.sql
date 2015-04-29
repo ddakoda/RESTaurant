@@ -30,5 +30,4 @@ CREATE TABLE users (
 );
 
 -- CREATE TABLE receipts (id SERIAL PRIMARY KEY, party_id INTEGER, name VARCHAR(255));
---
 -- CREATE TABLE guests (id SERIAL PRIMARY KEY, order_id INTEGER, name VARCHAR(255));

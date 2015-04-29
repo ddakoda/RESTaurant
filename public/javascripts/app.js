@@ -27,8 +27,8 @@ $(document).ready(function(){
 
   $('#place-order').on('click', function(){
 
-    var partyId = app.partySelection.get('id');  // Obtain the id from the selected party
-    var foodId = app.foodSelection.get('id');   // Obtain the id from the selected food
+    var partyId = app.partySelection.get('id');
+    var foodId = app.foodSelection.get('id');
 
     $.ajax({
       method: 'post',
