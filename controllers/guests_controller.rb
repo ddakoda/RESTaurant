@@ -19,5 +19,9 @@ class GuestsController < Sinatra::Base
   else
     erb :not_authenticated
   end
+
+  post '/sessions' do
+    'sippin'
+  end
 end
 end

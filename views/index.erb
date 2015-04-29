@@ -2,7 +2,7 @@
   <head>
     <title>WikiWiki</title>
     <link rel="stylesheet" href="/stylesheets/styles.css">
-    <%= erb :template %>
+    template: _.template('<%= erb :template_rest %>'),
   </head>
   <body>
 
@@ -14,7 +14,7 @@
    </form>
 
    <!-- ****** Template ****** -->
-    <script type = 'text/template'>
+    <script type = 'text/template_rest'>
 
     <!-- ****** Libs ****** -->
     <script src='/javascripts/lib/jquery.js'></script>

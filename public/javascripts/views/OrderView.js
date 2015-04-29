@@ -1,18 +1,22 @@
 var app = app || {};
 
 app.OrderView = Backbone.View.extend({
-  initialize: function(options){
-    this.modelView = options.modelView;
-    this.listenTo(this.collection,'sync', this.render);
+  initialize: function(){
+    this.listenTo(this.model,'change', this.render);
+    this.listenTo(this.model,'delete', this.remove);
   },
+  template: _.template('<h3><%= name %></h3><p><%= cents %></p><button class="select-food">Select</button>'),
+  tagName: 'li',
+  className: 'food',
   render: function(){
-    var models = this.collection.models;
-    for (var i = 0; i < models.length; i++) {
-      var subView = new this.modelView({model: models[i]});
-      subView.render();
-      this.$el.append( subView.$el );
-      subView.delegateEvents();
+      this.$el.append( this.template( this.model.attributes ) );
+      return this;
+    },
+    events:{
+      'click .select-food': 'selectFood'
+    },
+    selectFood: function(){
+      $('.food-selected').removeClass('food-selected');
+      this.$el.addClass('food-selected');
     }
-    return this;
-  }
-});
+  });
