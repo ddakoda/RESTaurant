@@ -23,6 +23,11 @@ CREATE TABLE orders (
   party_id INTEGER
 );
 
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username INTEGER,
+  password_hash INTEGER
+);
 
 -- CREATE TABLE receipts (id SERIAL PRIMARY KEY, party_id INTEGER, name VARCHAR(255));
 --
