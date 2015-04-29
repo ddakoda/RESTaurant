@@ -60,9 +60,9 @@ namespace :db do
   task :junk_data do
 
     # Generate random Food
-    foods_starting = ['Veggie', 'Rice']
-    food_ending = ['Salad', 'Soup', 'Plate', 'Bowl']
-    cuisines = ['Lite', 'Homecooking', 'Party', 'Bar Food']
+    foods_starting = ['Americano', 'Cafe au Lait', 'Cappuccino', 'Cortado', 'Doppio', 'Flat White', 'Latte', 'Macchiato']
+    food_ending = ['Almond Milk', 'Cashew Milk', 'Coconut Milk', 'Hemp Milk', 'Pistachio Milk']
+    cuisines = ['Coffee', 'Gluten Free', 'Paleo', 'Vegan']
     rand(5..15).times do
       Food.create({
           name: ( foods_starting.sample + ' ' + food_ending.sample),
