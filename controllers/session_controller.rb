@@ -3,7 +3,6 @@ class SessionController < Sinatra::Base
   helpers Sinatra::SessionHelper
   use Rack::MethodOverride
 
-
   post '/' do
     user = User.find_by(:username => params[:username])
     if user && user.password == params[:password]

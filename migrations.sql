@@ -1,6 +1,5 @@
 psql
 
-
 CREATE DATABASE rest;
 \c rest
 
