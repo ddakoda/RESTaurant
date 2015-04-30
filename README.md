@@ -1,2 +1,2 @@
 # RESTaurant
-restaurant project/app
+- A restaurant POS project/app for taking orders.
