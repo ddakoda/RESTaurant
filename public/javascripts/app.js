@@ -32,7 +32,7 @@ $(document).ready(function(){
   $('#place-order').on('click', function(){
 
     var partyId = app.partySelection.get('id');
-    // var foodId = app.foodSelection.get('id');
+    var foodId = app.foodSelection.get('id');
 
     $.ajax({
       method: 'post',

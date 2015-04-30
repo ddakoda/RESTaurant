@@ -20,17 +20,18 @@
       erb :not_authenticated
     end
 
-    # get '/logout' do
-    #   current_user = nil
-    #   erb :not_authenticated
-    # end
-    # post '/sessions' do
-    #
-    # end
-    #
-    # delete '/sessions' do
-    #
-    # end
+    get '/logout' do
+      current_user = nil
+      erb :not_authenticated
+    end
+    
+    post '/sessions' do
+
+    end
+
+    delete '/sessions' do
+
+    end
 
   end
   end
