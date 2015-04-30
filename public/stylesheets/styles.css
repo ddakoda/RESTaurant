@@ -12,7 +12,7 @@ body {
 #wrapper {
   height: 100%;
   width: 100%;
-  background:url(http://i.imgur.com/9IunhMQ.jpg) center no-repeat;
+  background:url(http://i.imgur.com/pojLgPv.jpg) left;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -35,7 +35,7 @@ nav div {
 }
 
 nav div h1 {
-  color: rgba(255, 152, 67, .65;
+  color: rgba(255, 152, 67, 1);
   margin: 0;
 }
 
@@ -52,7 +52,7 @@ nav li {
 
 nav li a {
   line-height: 50px;
-  color: rgba(255, 152, 67, .65);
+  color: rgba(255, 152, 67, 1);
   text-align: center;
   text-decoration: none;
   font-family: 'Source Sans Pro', sans-serif;
@@ -60,8 +60,8 @@ nav li a {
 }
 
 nav li a:hover{
-  color: rgba(255, 202, 158, 1);
-  background-color: rgba(156, 147, 140, 1);
+  color: rgba(255, 152, 67, 1);
+  background-color: rgba(156, 146, 140, 1);
   transition: .5s;
 }
 
@@ -74,13 +74,15 @@ section {
   width: 60%;
   padding: 10px;
   margin: 100 auto;
-  background-color: rgba(255, 152, 67, 1);
+  background-image: url(http://i.imgur.com/9IunhMQ.jpg);
+  background-size: cover;
+  /*background-color: rgba(255, 152, 67, 1);*/
 }
 
 footer {
   height: 90px;
   width: 100%;
-  background-color: rgba(255, 47, 0, 1);
+  background-color: rgba(254, 254, 254, 1);
   clear: both;
   position: fixed;
   bottom: 0;
@@ -129,7 +131,7 @@ input[type='submit'] {
   margin: 10px auto;
   line-height: 60px;
   color: rgba(26, 22, 19, 1);
-  border: 2px solid rgba(156, 146, 140, 1);
+  border: 2px solid rgba(156, 141, 46, 1);
   background-color: rgba(255, 152, 67, 1);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
@@ -137,7 +139,7 @@ input[type='submit'] {
 }
 
 input[type='submit']:hover {
-	background-color: rgba(0, 178, 114, .8);
+	background-color: rgba(156, 147, 140, 1);
 }
 
 #submit-food {
@@ -146,7 +148,7 @@ input[type='submit']:hover {
   margin: 10px auto;
   line-height: 60px;
   color: rgba(0, 0, 0, 1);
-  border: 2px solid rgba(156, 146, 140, 1);
+  border: 2px solid rgba(156, 141, 46, 1);
   background-color: rgba(255, 255, 255, .8);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
@@ -154,7 +156,7 @@ input[type='submit']:hover {
 }
 
 #submit-food:hover {
-  background-color: rgba(0, 178, 114, .8);
+  background-color: rgba(156, 141, 46, 1);
   color: rgba(255, 255, 255, 1);
 }
 
@@ -166,14 +168,14 @@ input[type='submit']:hover {
   width: 30%;
   margin: 80px auto;
   float: left;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 #party-list {
   width: 30%;
   margin: 80px auto;
   float: left;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 #order-button{
@@ -189,8 +191,8 @@ input[type='submit']:hover {
   position: fixed;
   line-height: 60px;
   color: rgba(0, 0, 0, 1);
-  border: 2px solid rgba(156, 146, 140, 1);
-  background-color: rgba(255, 255, 255, .8);
+  border: 2px solid rgba(156, 141, 46, 1);
+  background-color: rgba(255, 255, 255, 1);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   text-decoration: none;

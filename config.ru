@@ -28,7 +28,7 @@ require './controllers/orders_controller'
 require './controllers/parties_controller'
 require './controllers/guests_controller'
 require './controllers/managers_controller'
-require './controllers/session_controller'
+require './controllers/sessions_controller'
 require './controllers/receipts_controller'
 
 # run app
@@ -37,6 +37,6 @@ map('/api/orders') { run OrdersController.new() }
 map('/api/parties') { run PartiesController.new() }
 map('/api/receipts') { run ReceiptsController.new() }
 map('/admin') { run ManagersController.new() }
-map('/sessions') { run SessionController.new() }
+map('/sessions') { run SessionsController.new() }
 map('/guests') { run GuestsController.new() }
 map('/') { run GuestsController.new() }

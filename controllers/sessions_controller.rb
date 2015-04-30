@@ -1,4 +1,4 @@
-class SessionController < Sinatra::Base
+class SessionsController < Sinatra::Base
   enable  :sessions
   helpers Sinatra::SessionHelper
   use Rack::MethodOverride
@@ -19,7 +19,7 @@ class SessionController < Sinatra::Base
 
   delete '/' do
     session[:current_user] = nil
-    erb :not_authenticated
+    redirect '/'
   end
 
 end
