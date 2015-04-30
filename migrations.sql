@@ -22,7 +22,6 @@ CREATE TABLE orders (
   food_id INTEGER
 );
 
-
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   username VARCHAR(255),

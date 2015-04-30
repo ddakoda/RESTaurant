@@ -39,5 +39,4 @@ map('/api/receipts') { run ReceiptsController.new() }
 map('/admin') { run ManagersController.new() }
 map('/sessions') { run SessionController.new() }
 map('/guests') { run GuestsController.new() }
-
 map('/') { run GuestsController.new() }

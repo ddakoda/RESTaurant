@@ -17,7 +17,7 @@ class SessionController < Sinatra::Base
     end
   end
 
-  get '/logout' do
+  delete '/' do
     session[:current_user] = nil
     erb :not_authenticated
   end
