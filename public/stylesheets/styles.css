@@ -13,14 +13,6 @@ font{
   font-color: black;
 }
 
-.food{
-  background-color: lightblue;
-}
-
-.party{
-  background-color: lightyellow;
-}
-
 h1{
   display: inline-block;
   border: 1px solid black;
