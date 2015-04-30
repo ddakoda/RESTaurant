@@ -12,7 +12,7 @@
         <h1>WikiWiki</h1>
       </div>
       <ul>
-        <li><a href='/logout'>Logout</a></li>
+        <li><a href='/sessions/logout'>Logout</a></li>
         <li><a href='/'>Orders</a></li>
       </ul>
     </nav>
@@ -63,7 +63,7 @@
       <script src='/javascripts/views/GeneralListView.js'></script>
 
       <!-- ****** JS Application ****** -->
-      <script src='/javascripts/app.js'></script>
+      <script src='/javascripts/adminApp.js'></script>
     </div>
 
     <footer>
@@ -72,58 +72,3 @@
 
   </body>
 </html>
-
-
-
-<!-- <html>
-  <head>
-    <title>WikiWiki</title>
-    <link rel="stylesheet" href="/stylesheets/styles.css">
-    <%= erb :template %>
-  </head>
-  <body>
-
-    <h2>Manager Status</h2>
-
-    <a href="/">Manager</a>
-
-    <form action="/sessions" method='post'>
-      <input type="hidden" name='_method' value='delete'>
-      <input type="submit" value='log-out'>
-    </form> -->
-
-
-
-  <!-- </body>
-</html> -->
-
-<!--
-
-<html>
-  <head>
-    <title>WikiWiki</title>
-    <link href="http://fonts.googleapis.com/css?family=Josefin+Sans:700|Amatic+SC:700" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/stylesheets/style.css">
-  </head>
-  <body>
-
-    <h1>Authenticated</h1>
-    <p></p>
-
-    <form action="/sessions" method="post">
-
-      <input type="/sessions" method="post">
-      <input type="submit" value="Log-Out">
-    </form>
-
-    <form id='rest-form'>
-
-    </form>
-
-    <script charset="utf-8" src="/javascripts/lib/jquery.js"></script>
-    <script charset="utf-8" src="/javascripts/lib/underscore.js"></script>
-    <script charset="utf-8" src="/javascripts/lib/backbone.js"></script>
-    <script charset="utf-8" src="/javascripts/app.js"></script>
-
-  </body>
-</html> -->

@@ -38,6 +38,6 @@ map('/api/parties') { run PartiesController.new() }
 map('/api/receipts') { run ReceiptsController.new() }
 map('/admin') { run ManagersController.new() }
 map('/sessions') { run SessionController.new() }
+map('/guests') { run GuestsController.new() }
 
 map('/') { run GuestsController.new() }
-map('/guests') { run GuestsController.new() }

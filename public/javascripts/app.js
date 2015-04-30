@@ -10,6 +10,10 @@ $(document).ready(function(){
     model: app.PartyModel
   })
 
+  // app.users = new app.UserCollection({
+  //   model: app.UserModel
+  // })
+
   app.foodListPainter = new app.GeneralListView({
     modelView: app.FoodView,
     collection: app.foods,
@@ -28,7 +32,7 @@ $(document).ready(function(){
   $('#place-order').on('click', function(){
 
     var partyId = app.partySelection.get('id');
-    var foodId = app.foodSelection.get('id');
+    // var foodId = app.foodSelection.get('id');
 
     $.ajax({
       method: 'post',

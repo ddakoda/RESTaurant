@@ -54,14 +54,14 @@ namespace :db do
     Party.destroy_all
   end
 
-  desc "Create User"
+  desc 'Create User'
   task :create_user do
   user = User.new({username: 'dakoduh'})
   user.password='deedub'
   user.save!
   end
 
-  desc "Fill Database some Junk Data"
+  desc 'Fill Database some Junk Data'
   task :junk_data do
 
     # Generate random Food
