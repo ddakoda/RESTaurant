@@ -21,6 +21,11 @@ class GuestsController < Sinatra::Base
     erb :not_authenticated
   end
 
+  get '/logout' do
+    session[:current_user] = nil
+    redirect '/'
+  end
+
   post '/sessions' do
 
   end
@@ -28,5 +33,6 @@ class GuestsController < Sinatra::Base
   delete '/sessions' do
 
   end
+
 end
 end

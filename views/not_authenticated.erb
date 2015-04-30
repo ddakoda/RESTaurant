@@ -1,5 +1,46 @@
 <html>
   <head>
+    <link rel='stylesheet' href='/stylesheets/styles.css' media='screen'>
+    <link href='http://fonts.googleapis.com/css?family=Martel+Sans:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
+    <!-- <%= erb :template %> -->
+  </head>
+  <body id="wrapper">
+
+    <nav>
+      <div class="logo">
+        <h1>WikiWiki</h1>
+      </div>
+      <ul>
+        <li><a href='/'>Coffee Orders</a></li>
+      </ul>
+    </nav>
+
+    <section></section>
+
+    <div id='form-container'>
+
+      <h3>manager portal</h3>
+
+      <form action="/sessions" method="post">
+        <input type="text" name="username" placeholder='username'>
+        <input type="text" name="password" placeholder='password'>
+        <input type="submit" value="Log-In">
+      </form>
+
+    </div>
+
+    <footer>
+      <h2>Drink up</h2>
+    </footer>
+
+  </body>
+</html>
+
+
+
+<!-- <html>
+  <head>
     <title>WikiWiki</title>
     <link rel="stylesheet" href="/stylesheets/styles.css">
   </head>
@@ -16,7 +57,7 @@
     </form>
 
   </body>
-</html>
+</html> -->
 
 <!--
 <html>

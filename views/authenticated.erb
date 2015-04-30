@@ -1,7 +1,85 @@
 <html>
   <head>
+    <link rel='stylesheet' href='/stylesheets/styles.css' media='screen'>
+    <link href='http://fonts.googleapis.com/css?family=Martel+Sans:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
+    <!-- <%= erb :template %> -->
+  </head>
+  <body id="wrapper">
+
+    <nav>
+      <div class="logo">
+        <h1>WikiWiki</h1>
+      </div>
+      <ul>
+        <li><a href='/logout'>Logout</a></li>
+        <li><a href='/'>Orders</a></li>
+      </ul>
+    </nav>
+
+    <section></section>
+
+    <div id="form-container">
+
+      <h3>Another coffee?!</h3>
+
+      <!-- <script type="text/template" id="form-template"> -->
+
+        <input type='text' id='food' placeholder='Food Name'>
+
+        <input type='text' id='cents' placeholder='Cents'>
+
+        <input type='text' id='description' placeholder='Description'>
+
+        <button id='submit-food'>Submit</button>
+
+      <!-- </script> -->
+      <!-- ****** JS Libraries ****** -->
+      <script src='/javascripts/lib/jquery.js'></script>
+      <script src='/javascripts/lib/underscore.js'></script>
+      <script src='/javascripts/lib/backbone.js'></script>
+
+      <!-- ****** Backbone Models ****** -->
+      <script src='/javascripts/models/FoodModel.js'></script>
+      <script src='/javascripts/models/PartyModel.js'></script>
+      <script src='/javascripts/models/GuestModel.js'></script>
+      <script src='/javascripts/models/UserModel.js'></script>
+      <script src='/javascripts/models/OrderModel.js'></script>
+      <script src='/javascripts/models/ReceiptModel.js'></script>
+
+      <!-- ****** Backbone Collection ****** -->
+      <script src='/javascripts/collections/FoodCollection.js'></script>
+      <script src='/javascripts/collections/PartyCollection.js'></script>
+      <script src='/javascripts/collections/GuestCollection.js'></script>
+      <script src='/javascripts/collections/OrderCollection.js'></script>
+      <script src='/javascripts/collections/ReceiptCollection.js'></script>
+
+      <!-- ****** Backbone Views ****** -->
+      <script src='/javascripts/views/FoodView.js'></script>
+      <script src='/javascripts/views/PartyView.js'></script>
+      <script src='/javascripts/views/GuestView.js'></script>
+      <script src='/javascripts/views/OrderView.js'></script>
+      <script src='/javascripts/views/ReceiptView.js'></script>
+      <script src='/javascripts/views/GeneralListView.js'></script>
+
+      <!-- ****** JS Application ****** -->
+      <script src='/javascripts/app.js'></script>
+    </div>
+
+    <footer>
+      <h2>Drink up</h2>
+    </footer>
+
+  </body>
+</html>
+
+
+
+<!-- <html>
+  <head>
     <title>WikiWiki</title>
     <link rel="stylesheet" href="/stylesheets/styles.css">
+    <%= erb :template %>
   </head>
   <body>
 
@@ -12,41 +90,12 @@
     <form action="/sessions" method='post'>
       <input type="hidden" name='_method' value='delete'>
       <input type="submit" value='log-out'>
-    </form>
+    </form> -->
 
-    <!-- ****** JS Libraries ****** -->
-    <script src='/javascripts/lib/jquery.js'></script>
-    <script src='/javascripts/lib/underscore.js'></script>
-    <script src='/javascripts/lib/backbone.js'></script>
 
-    <!-- ****** Backbone Models ****** -->
-    <script src='/javascripts/models/FoodModel.js'></script>
-    <script src='/javascripts/models/PartyModel.js'></script>
-    <script src='/javascripts/models/GuestModel.js'></script>
-    <script src='/javascripts/models/UserModel.js'></script>
-    <script src='/javascripts/models/OrderModel.js'></script>
-    <script src='/javascripts/models/ReceiptModel.js'></script>
 
-    <!-- ****** Backbone Collection ****** -->
-    <script src='/javascripts/collections/FoodCollection.js'></script>
-    <script src='/javascripts/collections/PartyCollection.js'></script>
-    <script src='/javascripts/collections/GuestCollection.js'></script>
-    <script src='/javascripts/collections/OrderCollection.js'></script>
-    <script src='/javascripts/collections/ReceiptCollection.js'></script>
-
-    <!-- ****** Backbone Views ****** -->
-    <script src='/javascripts/views/FoodView.js'></script>
-    <script src='/javascripts/views/PartyView.js'></script>
-    <script src='/javascripts/views/GuestView.js'></script>
-    <script src='/javascripts/views/OrderView.js'></script>
-    <script src='/javascripts/views/ReceiptView.js'></script>
-    <script src='/javascripts/views/GeneralListView.js'></script>
-
-    <!-- ****** JS Application ****** -->
-    <script src='/javascripts/app.js'></script>
-
-  </body>
-</html>
+  <!-- </body>
+</html> -->
 
 <!--
 

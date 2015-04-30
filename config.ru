@@ -40,3 +40,4 @@ map('/admin') { run ManagersController.new() }
 map('/sessions') { run SessionController.new() }
 
 map('/') { run GuestsController.new() }
+map('/guests') { run GuestsController.new() }
